@@ -9,6 +9,7 @@ python setup.py build
 sudo python setup.py install
 
 ~make sure tornado can be work
+
 sudo apt-get install python-mysqldb 
 
 open you mysql phpmyadmin and creat a database pay
