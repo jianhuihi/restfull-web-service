@@ -19,7 +19,7 @@ def main():
         (r"/", MainHandler),
         (r"/test", TestHandler),
         (r"/trade", TradeHandler),
-        #(r"/testget/([0-9]+)", TestGetHandler),
+        (r"/testget/([0-9]+)", TestGetHandler),
         (r"/testget/(\w+)", TestGetHandler),
         (r"/go/(\w+)/(\w+)/(\w+)", GoHandler),
         (r"/testmod/(\w+)", TestModHandler),
