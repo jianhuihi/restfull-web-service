@@ -1,7 +1,7 @@
 tornado
 =======
 
-tornado rest api, include ORM, use python mysqldb
+use python tornado make rest web service, include ORM, use python mysqldb
 
 you should install tornado-3.1 and python-mysqldb
 cd tornado-3.1/
