@@ -8,7 +8,7 @@ cd tornado-3.1/
 python setup.py build
 sudo python setup.py install
 
-#make user tornado can be work
+~make user tornado can be work
 
 sudo apt-get install python-mysqldb 
 
