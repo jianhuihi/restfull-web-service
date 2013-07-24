@@ -10,18 +10,12 @@ from tornado.options import define, options
 
 define("port", default=8889, help="run on the given port", type=int)
 
-from test import TestHandler, TradeHandler, TestGetHandler, GoHandler, TestModHandler
-
-
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write("Hello, world. learsu")
-
+from test import MainHandler, TestHandler, TradeHandler, TestGetHandler, GoHandler, TestModHandler
 
 def main():
     tornado.options.parse_command_line()
     application = tornado.web.Application([
-    	#('/favicon.ico', tornado.web.ErrorHandler, dict(status_code=404)), 
+    	('/favicon.ico', tornado.web.ErrorHandler, dict(status_code=404)), 
         (r"/", MainHandler),
         (r"/test", TestHandler),
         (r"/trade", TradeHandler),

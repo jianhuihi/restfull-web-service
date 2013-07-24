@@ -5,6 +5,12 @@ import tornado.web
 import json
 from model.test import Test
 
+class MainHandler(tornado.web.RequestHandler):
+	"""docstring for MainHandler"""
+	def get(self):
+		self.write("hello world, this is learsu test")
+		
+
 class TestHandler(tornado.web.RequestHandler):
 	"""docstring for TestHandler"""
 	def get(self):
