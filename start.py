@@ -1,6 +1,7 @@
 #!/bin/env python
 #coding = utf-8
 
+import sys
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
@@ -13,9 +14,10 @@ define("port", default=8889, help="run on the given port", type=int)
 from test import MainHandler, TestHandler, TradeHandler, TestGetHandler, GoHandler, TestModHandler
 
 def main():
+    listen_port =  sys.argv[1]
     tornado.options.parse_command_line()
     application = tornado.web.Application([
-    	('/favicon.ico', tornado.web.ErrorHandler, dict(status_code=404)), 
+        ('/favicon.ico', tornado.web.ErrorHandler, dict(status_code=404)), 
         (r"/", MainHandler),
         (r"/test", TestHandler),
         (r"/trade", TradeHandler),
@@ -25,7 +27,8 @@ def main():
         (r"/testmod/(\w+)", TestModHandler),
     ])
     http_server = tornado.httpserver.HTTPServer(application)
-    http_server.listen(options.port)
+    #http_server.listen(options.port)
+    http_server.listen(listen_port)
     tornado.ioloop.IOLoop.instance().start()
 
 
