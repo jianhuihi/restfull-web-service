@@ -4,12 +4,7 @@
 import sys
 import tornado.httpserver
 import tornado.ioloop
-import tornado.options
 import tornado.web
-
-from tornado.options import define, options
-
-define("port", default=8889, help="run on the given port", type=int)
 
 from test import MainHandler, TestHandler, TradeHandler, TestGetHandler, GoHandler, TestModHandler
 
@@ -27,10 +22,8 @@ def main():
         (r"/testmod/(\w+)", TestModHandler),
     ])
     http_server = tornado.httpserver.HTTPServer(application)
-    #http_server.listen(options.port)
     http_server.listen(listen_port)
     tornado.ioloop.IOLoop.instance().start()
-
 
 if __name__ == "__main__":
     main()

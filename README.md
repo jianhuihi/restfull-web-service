@@ -25,3 +25,14 @@ INSERT INTO `test` (`id`, `name`, `pwd`) VALUES
 (1, 'python-test', '123456'),  
 (2, 'python-test', '123456'),  
 (3, 'python-test', '123456');  
+
+
+usage in ubuntu 13.04  
+
+sudo chmod -R 777 start.sh  
+bash ./start.sh start //start tornado  
+bash ./start.sh stop //stop tornado  
+bash ./start.sh status //tornado status   
+bash ./start.sh restart //restart tornado  
+
+main.port just notes tornado port

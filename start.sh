@@ -1,17 +1,9 @@
 #!/bin/sh
-#
 # Filename:    start.sh
-# Revision:    1.0
-# Date:        2012-06-14
-# Author:      simonzhang
-# web:         www.simonzhang.net
-# Email:       simon-zzm@163.com
-#
-### END INIT INFO
- 
+
 # Source function library.
 . /etc/profile
- 
+
 # Set the base value
 listen_line=2
 listen_start=8889
