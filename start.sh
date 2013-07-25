@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Filename:    start.sh
 
 # Source function library.

@@ -10,7 +10,6 @@ from test import MainHandler, TestHandler, TradeHandler, TestGetHandler, GoHandl
 
 def main():
     listen_port =  sys.argv[1]
-    tornado.options.parse_command_line()
     application = tornado.web.Application([
         ('/favicon.ico', tornado.web.ErrorHandler, dict(status_code=404)), 
         (r"/", MainHandler),
